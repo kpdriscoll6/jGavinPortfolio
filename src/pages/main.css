@@ -1,0 +1,104 @@
+#logo {
+  font-size: 50px;
+  font-family: "Contrail One";
+}
+
+.nav-link {
+  font-size: 20px;
+  font-family: "Open Sans";
+}
+
+
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#bio {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#media {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#thoughts {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#connect {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#footer {
+  background-color:#101010;
+}
+
+#footer .btn {
+  color: #C8C8C8;
+}
+
+p {
+  color: white;
+  padding: 5px;
+  text-align: justify;
+  font-family: "Open Sans";
+}
+
+.lead {
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5 {
+  color: white;
+  font-family: "Contrail One";
+}
+
+hr {
+  color: white;
+  background-color: white;
+  width: 66%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#headshot {
+  border-radius: 25px;
+  padding: 20px;
+}
+
+
+.spacer{
+    min-height:500px;
+}
+
+
+#postlink {
+  color:#C8C8C8
+}
