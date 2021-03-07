@@ -30,7 +30,6 @@ class Thoughts extends Component {
   render() {
     return (
       <div className="container-fluid" id="thoughts">
-        <Navbar />
         <div className="container text-center">
           <h1> THOUGHTS </h1>
           <hr />

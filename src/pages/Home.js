@@ -2,17 +2,22 @@ import React, { Component } from "react";
 import "./main.css";
 import Navbar from '../components/Navbar' 
 import Footer from '../components/Footer'
+import Splash from './Splash'
 import Bio from './Bio'
+import Media from './Media'
+import Thoughts from './Thoughts'
+import Connect from './Connect'
 
 class Home extends Component {
   render() {
     return (
-      <div className="container-fluid mb-0" id="home" >
+      <div className="container-fluid" id="home" >
         <Navbar/>
-        <div className = "spacer"/>
-        <h1> Drummer Percussionist        Educator</h1>
-        <div className = "spacer"/>
+        <Splash/>
         <Bio/>
+        <Media/>
+        <Thoughts/>
+        <Connect/>
         <Footer/>
       </div>
     );

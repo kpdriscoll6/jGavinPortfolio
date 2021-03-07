@@ -26,9 +26,9 @@ class Navbar extends Component {
             <div className="collapse navbar-collapse pr-5" id="navbarCollapse">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <NavLink className="nav-link" to="/">
+                  <Link className="nav-link" to="/">
                     <i className="fa fa-home"></i>
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="bio" smooth={true} duration={1000}>
@@ -36,19 +36,19 @@ class Navbar extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/Media">
+                  <Link className="nav-link" to="media" smooth={true} duration={1000}>
                     MEDIA
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/Thoughts">
+                  <Link className="nav-link" to="thoughts" smooth={true} duration={1000}>
                     THOUGHTS
-                  </NavLink>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/Connect">
+                  <Link className="nav-link" to="connect" smooth={true} duration={1000}>
                     CONNECT
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>

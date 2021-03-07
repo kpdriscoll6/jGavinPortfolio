@@ -28,7 +28,7 @@ class Media extends Component {
   render() {
     return (
       <div className="container-fluid" id="media">
-        <Navbar />
+        <div className="container text-center">
         <h1>Media</h1>
         <div className = "spacer"/>
         {/* carousel starts here */}
@@ -89,6 +89,7 @@ class Media extends Component {
           </a>
         </div>
         {/* coursel ends here */}
+      </div>
       </div>
     );
   }

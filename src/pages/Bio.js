@@ -3,10 +3,8 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import parse from "html-react-parser";
 
 import "./main.css";
-import Navbar from "../components/Navbar";
 import client from "../components/Client";
 import Loader from "../images/loader.gif";
-import Footer from '../components/Footer' 
 
 class Bio extends Component {
   constructor() {
@@ -27,22 +25,9 @@ class Bio extends Component {
   render() {
     return (
       <div className="container-fluid" id="bio">
-        <Navbar />
         <div className="container text-center">
           <h1> BIO </h1>
           <hr />
-          {this.state.bioContent.length === 0 ? (
-            <div className="align-center">
-              <img src={Loader} alt="Loader" />
-            </div>
-          ) : (
-            <img
-              src={this.state.bioContent.fields.headshot.fields.file.url}
-              className="img-fluid"
-              alt="john"
-              id="headshot"
-            ></img>
-          )}
           <p className="lead">
             {this.state.bioContent.length === 0 ? (
               <div className="align-center">
@@ -69,7 +54,6 @@ class Bio extends Component {
             parse(documentToHtmlString(this.state.bioContent.fields.newsText))
           )}
         </div>
-        <Footer/>
       </div>
     );
   }

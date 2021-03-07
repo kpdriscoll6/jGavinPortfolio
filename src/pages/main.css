@@ -19,6 +19,15 @@
   background-size: cover;
 }
 
+#splash {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/johnBackground.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 #bio {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/johnBackground.jpg);
@@ -95,7 +104,7 @@ hr {
 
 
 .spacer{
-    min-height:500px;
+    min-height:75px;
 }
 
 
