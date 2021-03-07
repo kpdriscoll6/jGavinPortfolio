@@ -6,8 +6,7 @@ import {Link} from 'react-scroll'
 class Navbar extends Component {
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-md navbar-dark">
+        <nav className="navbar sticky-top navbar-expand-md navbar-dark">
           <div className="container-fluid">
             <NavLink className="navbar-brand pl-5" id="logo" to="/">
               John Gavin
@@ -54,7 +53,6 @@ class Navbar extends Component {
             </div>
           </div>
         </nav>
-      </div>
     );
   }
 }
