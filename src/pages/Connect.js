@@ -1,19 +1,34 @@
-import React, { Component } from "react";
+//import React, { Component } from "react";
 import "./main.css";
-import Navbar from '../components/Navbar' 
+import React from 'react';
 
-class Connect extends Component {
-  render() {
-    return (
-      <div className="container-fluid" id="connect">
-        <div className="container text-center">
-        <h1>Connect</h1>
-        </div>
-      </div>
-    );
-  }
+export default function Connect() {
+  return (
+  <div className="container-fluid" id="media">
+  <div className="container">
+  <div className="row">
+    <div className="col-12 text-center">
+      <h1>Connect</h1>
+    </div>
+  </div>
+  <form name="contact" method="POST" data-netlify="true">
+    <p>
+      <label>First Name: <input type="text" name="name" /></label>   
+    </p>
+    <p>
+      <label>Last Name: <input type="text" name="name" /></label>   
+    </p>
+    <p>
+      <label>Email: <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+  </div>
+  </div>
+  );
 }
-
-//https://medium.com/weekly-webtips/simple-react-contact-form-without-back-end-9fa06eff52d9/
-
-export default Connect;
