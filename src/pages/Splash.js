@@ -38,7 +38,12 @@ class Splash extends Component {
               id="headshot"
             ></img>
           )}
-        <h1> Drummer Percussionist Educator</h1>
+        <div className="row">
+        <div className="col-12 col-md-4"><h1>Drummer</h1></div>
+        <div className="col-12 col-md-4"><h1>Percussionist</h1></div>
+        <div className="col-12 col-md-4"><h1>Educator</h1></div>
+        </div>
+        
         <div className="spacer"/>
         </div>
         </div>
