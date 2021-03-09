@@ -1,47 +1,85 @@
 //import React, { Component } from "react";
 import "./main.css";
-import React from 'react';
+import React from "react";
 
 export default function Connect() {
   return (
-  <div className="container-fluid p-5" id="media">
-  <div className="container">
-  <div className="row">
-    <div className="col-12 text-center">
-      <h1>Connect</h1>
-    </div>
-  </div>
-  <form name="contact" method="POST" action="/contact" data-netlify="true">
-    <div className="row">
-      <div className="col">
-      <p>
-        <label>First Name: <input type="text" name="firstName" placeholder="First Name"/></label>   
-      </p>
+    <div className="container p-5" id="media">
+      <div className="row">
+        <div className="col-12 text-center">
+          <h1>Connect</h1>
+          <hr />
+        </div>
       </div>
-      <div className="col">
-      <p>
-        <label>Last Name: <input type="text" name="lastName" placeholder="Last Name"/></label>   
-      </p>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 offset-md-4">
+            <div className="well well-sm">
+              <form className="form-horizontal" action method="post">
+                <fieldset>
+                  {/* Name input*/}
+                  <div className="form-group">
+                    <label className="col-md-3 control-label" htmlFor="name">
+                      Name
+                    </label>
+                    <div className="col-md-9">
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        className="form-control"
+                      />
+                    </div>
+                  </div>
+                  {/* Email input*/}
+                  <div className="form-group">
+                    <label className="col-md-3 control-label" htmlFor="email">
+                      E-mail
+                    </label>
+                    <div className="col-md-9">
+                      <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="Your email"
+                        className="form-control"
+                      />
+                    </div>
+                  </div>
+                  {/* Message body */}
+                  <div className="form-group">
+                    <label className="col-md-3 control-label" htmlFor="message">
+                      Message
+                    </label>
+                    <div className="col-md-9">
+                      <textarea
+                        className="form-control"
+                        id="message"
+                        name="message"
+                        placeholder="Please enter your message here..."
+                        rows={5}
+                        defaultValue={""}
+                      />
+                    </div>
+                  </div>
+                  {/* Form actions */}
+                  <div className="form-group">
+                    <div className="col-md-12 text-left">
+                      <button
+                        type="submit"
+                        className="btn btn-secondary btn-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div className="row">
-    <p>
-      <label>Email: <input type="email" name="email" placeholder="Email"/></label>
-    </p>
-    </div>
-    <div className="row">
-    <p>
-      <label>Message: <textarea name="message" placeholder="Message"></textarea></label>
-    </p>
-    </div>
-    <div className="row">
-      <div className="col-12 text-center">
-      <button type="submit" className="btn btn-secondary">Send</button>
-    </div>
-    </div>
-    
-  </form>
-  </div>
-  </div>
   );
 }

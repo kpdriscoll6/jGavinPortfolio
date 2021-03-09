@@ -64,13 +64,17 @@
   background-size: cover;
   padding-top: 100px;
 }
+.well {
+  color: white;
+  font-family: "Open Sans";
+}
 
 #footer {
-  background-color:#101010;
+  background-color: #101010;
 }
 
 #footer .btn {
-  color: #C8C8C8;
+  color: #c8c8c8;
 }
 
 p {
@@ -86,7 +90,11 @@ p {
   text-align: center;
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: white;
   font-family: "Contrail One";
 }
@@ -104,12 +112,10 @@ hr {
   padding: 20px;
 }
 
-
-.spacer{
-    min-height:75px;
+.spacer {
+  min-height: 75px;
 }
 
-
 #postlink {
-  color:#C8C8C8
+  color: #c8c8c8;
 }

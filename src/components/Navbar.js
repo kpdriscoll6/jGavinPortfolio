@@ -50,34 +50,36 @@ class Navbar extends Component {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+            <div className="container-fluid text-center">
             <div className="collapse navbar-collapse pr-5" id="navbarCollapse">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="home" smooth={true} duration={1000}>
+                  <Link className="nav-link" to="home" smooth={true} duration={1000} data-toggle="collapse" data-target=".navbar-collapse">
                     <i className="fa fa-home"></i>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="bio" smooth={true} duration={1000}>
+                  <Link className="nav-link" to="bio" smooth={true} duration={1000} data-toggle="collapse" data-target=".navbar-collapse">
                     BIO
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="media" smooth={true} duration={1000}>
+                  <Link className="nav-link" to="media" smooth={true} duration={1000} data-toggle="collapse" data-target=".navbar-collapse">
                     MEDIA
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="thoughts" smooth={true} duration={1000}>
+                  <Link className="nav-link" to="thoughts" smooth={true} duration={1000} data-toggle="collapse" data-target=".navbar-collapse">
                     THOUGHTS
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="connect" smooth={true} duration={1000}>
+                  <Link className="nav-link" to="connect" smooth={true} duration={1000} data-toggle="collapse" data-target=".navbar-collapse">
                     CONNECT
                   </Link>
                 </li>
               </ul>
+              </div>
             </div>
           </div>
         </nav>
