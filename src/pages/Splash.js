@@ -24,9 +24,9 @@ class Splash extends Component {
   }
   render() {
     return (
-        <div className="container-fluid" id="splash" >
-            <div className="container text-center">
-        {this.state.bioContent.length === 0 ? (
+      <div className="container-fluid" id="splash">
+        <div className="container text-center">
+          {this.state.bioContent.length === 0 ? (
             <div className="align-center">
               <img src={Loader} alt="Loader" />
             </div>
@@ -38,15 +38,21 @@ class Splash extends Component {
               id="headshot"
             ></img>
           )}
-        <div className="row">
-        <div className="col-12 col-md-4"><h1>Drummer</h1></div>
-        <div className="col-12 col-md-4"><h1>Percussionist</h1></div>
-        <div className="col-12 col-md-4"><h1>Educator</h1></div>
+          <div className="row">
+            <div className="col-12 col-md-4">
+              <h1>Drummer</h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <h1>Percussionist</h1>
+            </div>
+            <div className="col-12 col-md-4">
+              <h1>Educator</h1>
+            </div>
+          </div>
+
+          <div className="spacer" />
         </div>
-        
-        <div className="spacer"/>
-        </div>
-        </div>
+      </div>
     );
   }
 }

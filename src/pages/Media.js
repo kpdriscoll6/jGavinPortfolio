@@ -29,22 +29,22 @@ class Media extends Component {
     return (
       <div className="container-fluid" id="media">
         <div className="container text-center">
-        <h1>Media</h1>
-        <div className = "spacer"/>
-        {/* carousel starts here */}
-        <div
-          id="carouselExampleControls"
-          className="carousel slide"
-          data-ride="carousel"
-        >
-          {/* refactor this as if then (media is array) can't find fields in array before choosing single object */}
-          {this.state.mediaContent.length === 0 ? (
-            <div className="align-center">
-              <img src={Loader} alt="Loader" />
-            </div>
-          ) : (
-          <div className="carousel-inner">
-            {/* {this.state.mediaContent.map((image) => {
+          <h1>Media</h1>
+          <div className="spacer" />
+          {/* carousel starts here */}
+          <div
+            id="carouselExampleControls"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            {/* refactor this as if then (media is array) can't find fields in array before choosing single object */}
+            {this.state.mediaContent.length === 0 ? (
+              <div className="align-center">
+                <img src={Loader} alt="Loader" />
+              </div>
+            ) : (
+              <div className="carousel-inner">
+                {/* {this.state.mediaContent.map((image) => {
               return (
                 <div className="carousel-item ">
                   <img
@@ -55,41 +55,46 @@ class Media extends Component {
                 </div>
               );
             })} */}
-            <div className="carousel-item active">
-              {console.log(this.state.mediaContent[0])}
-              <img className="d-block w-100" src={this.state.mediaContent[0].fields.mediaCarousel} alt="First slide" />
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src={''} alt="Second slide" />
-            </div>
-          </div>)}
-          <a
-            className="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Next</span>
-          </a>
+                <div className="carousel-item active">
+                  {console.log(this.state.mediaContent[0])}
+                  <img
+                    className="d-block w-100"
+                    src={this.state.mediaContent[0].fields.mediaCarousel}
+                    alt="First slide"
+                  />
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={""} alt="Second slide" />
+                </div>
+              </div>
+            )}
+            <a
+              className="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a
+              className="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Next</span>
+            </a>
+          </div>
+          {/* coursel ends here */}
         </div>
-        {/* coursel ends here */}
-      </div>
       </div>
     );
   }

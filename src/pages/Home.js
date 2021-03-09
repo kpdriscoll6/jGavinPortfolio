@@ -1,35 +1,35 @@
 import React, { Component } from "react";
 import "./main.css";
-import Navbar from '../components/Navbar' 
-import Footer from '../components/Footer'
-import Splash from './Splash'
-import Bio from './Bio'
-import Media from './Media'
-import Thoughts from './Thoughts'
-import Connect from './Connect'
-import {Element} from 'react-scroll' 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Splash from "./Splash";
+import Bio from "./Bio";
+import Media from "./Media";
+import Thoughts from "./Thoughts";
+import Connect from "./Connect";
+import { Element } from "react-scroll";
 
 class Home extends Component {
   render() {
     return (
-      <div className="container-fluid" id="home" >
-        <Navbar/>
+      <div className="container-fluid" id="home">
+        <Navbar />
         <Element name="splash">
-        <Splash/>
+          <Splash />
         </Element>
         <Element name="bio">
-        <Bio/>
+          <Bio />
         </Element>
         <Element name="media">
-        <Media/>
+          <Media />
         </Element>
         <Element name="thoughts">
-        <Thoughts/>
+          <Thoughts />
         </Element>
         <Element name="connect">
-        <Connect/>
+          <Connect />
         </Element>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
