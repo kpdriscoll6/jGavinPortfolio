@@ -23,21 +23,25 @@ class ViewPost extends Component {
       this.setState({
         post: item,
       });
-      console.log(Object.keys(this.state.post.fields));
-      console.log(this.state.post.fields.postImage.fields.file.url)
     });
   }
   render() {
     return (
       <div className="container-fluid" id="thoughts">
-        <div className="container border text-center p-5" id="blogPost">
+        <div className="container text-center p-5" id="blogPost">
           <div className="row">
-            <NavLink className="nav-link" to="/">
-              <h2>
-                <i className="fa fa-home"></i>
-              </h2>
-            </NavLink>
-            <h1> THOUGHTS </h1>
+            <div className="col-2  text-center">
+              <NavLink className="nav-link" to="/">
+                <h2>
+                  <i className="fa fa-home"></i>
+                </h2>
+              </NavLink>
+            </div>
+
+            <div className="col-8  text-center">
+              <h1> THOUGHTS </h1>
+            </div>
+            <div className="col-2 "></div>
           </div>
           <hr />
           {Object.keys(this.state.post).length === 0 ? (
@@ -55,7 +59,7 @@ class ViewPost extends Component {
               ) : (
                 <div />
               )}
-              <div className="container border">
+              <div className="container p-3">
                 <p>
                   {parse(documentToHtmlString(this.state.post.fields.postText))}
                 </p>
@@ -64,10 +68,16 @@ class ViewPost extends Component {
           )}
           <NavLink className="nav-link" to="/">
             <div className="row">
-              <h5>
-                <i className="fa fa-long-arrow-alt-left"></i>
-              </h5>
-              <h5> BACK </h5>
+              <div className="col-5 "></div>
+              <div className="col-1 text-right">
+                <h5>
+                  <i className="fa fa-long-arrow-alt-left"></i>
+                </h5>
+              </div>
+              <div className="col-1 text-left">
+                <h5> BACK </h5>
+              </div>
+              <div className="col-5"></div>
             </div>
           </NavLink>
         </div>

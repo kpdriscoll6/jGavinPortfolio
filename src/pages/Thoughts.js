@@ -54,7 +54,7 @@ class Thoughts extends Component {
                         <div className="col-6 d-none d-lg-block pt-4">
                           <div className="container text-center">
                             <img
-                              src="//images.ctfassets.net/57xmhcfzpz7y/DgJy2S5LW9SQK9L9w1oAs/39402c61aaa8f27ceee5d4777a4744ab/post1_image.jpg"
+                              src={post.fields.postImage.fields.file.url}
                               id="postThumbnail"
                               alt="post"
                             ></img>
