@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import parse from "html-react-parser";
 
 import "./main.css";
 import client from "../components/Client";

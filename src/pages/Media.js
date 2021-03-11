@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./main.css";
 
 import client from "../components/Client";
-import Navbar from "../components/Navbar";
 import Loader from "../images/loader.gif";
 
 class Media extends Component {
@@ -22,13 +21,12 @@ class Media extends Component {
       .then((entries) => {
         //console.log(entries)
         this.setState({ mediaContent: entries.items });
-        console.log(this.state.mediaContent);
+        //console.log("trying to load images");
+        //console.log(typeof this.state.mediaContent);
       });
   }
+
   render() {
-    {
-      console.log("trying to load images");
-    }
     return (
       <div className="container-fluid" id="media">
         <div className="container text-center">
@@ -40,44 +38,43 @@ class Media extends Component {
             className="carousel slide"
             data-ride="carousel"
           >
-            {/* refactor this as if then (media is array) can't find fields in array before choosing single object */}
             {this.state.mediaContent.length === 0 ? (
               <div className="align-center">
-                //
                 <img src={Loader} alt="Loader" />
               </div>
             ) : (
               <div className="carousel-inner">
-                {this.state.mediaContent.map(() => {
+                {/*pulls the first image then slice the array then map*/}
+                <div
+                  className="carousel-item active"
+                  key={this.state.mediaContent[0].fields.carouselImage.fields.title}
+                >
+                  <img
+                    className="d-block w-100"
+                    //src={this.state.mediaContent.fields.mediaCarousel.fields.file.url}
+                    //"//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
+                    src={
+                      this.state.mediaContent[0].fields.carouselImage.fields
+                        .file.url
+                    }
+                    alt="first slide"
+                  />
+                </div>
+                {this.state.mediaContent.slice(1).map((media) => {
+                  console.log(media.fields.carouselImage.fields);
                   return (
-                    <div className="carousel-item ">
+                    <div
+                      className="carousel-item"
+                      key={media.fields.carouselImage.fields.title}
+                    >
                       <img
                         className="d-block w-100"
-                        //src={this.state.mediaContent.fields.mediaCarousel.fields.file.url}
-                        //"//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
-                        src="//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
+                        src={media.fields.carouselImage.fields.file.url}
                         alt="slide"
                       />
                     </div>
                   );
                 })}
-                <div className="carousel-item active">
-                  {console.log(this.state.mediaContent[0])}
-                  <img
-                    className="d-block w-100"
-                    src="//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
-                    alt="First slide"
-                  />
-                </div>
-                <div className="carousel-item">
-                  <img
-                    className="d-block w-100"
-                    src={
-                      "//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
-                    }
-                    alt="Second slide"
-                  />
-                </div>
               </div>
             )}
             <a
@@ -105,7 +102,7 @@ class Media extends Component {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          {/* coursel ends here */}
+          {/* carousel ends here */}
         </div>
       </div>
     );

@@ -48,7 +48,7 @@ class ViewPost extends Component {
                 <img
                   src={this.state.post.fields.postImage.fields.file.url}
                   className="img-fluid"
-                  alt="post image"
+                  alt="post"
                   id="postImage"
                 ></img>
               ) : (

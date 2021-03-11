@@ -4,9 +4,7 @@ import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 
 import "./main.css";
-import Navbar from "../components/Navbar";
 import client from "../components/Client";
-import Loader from "../images/loader.gif";
 
 class Thoughts extends Component {
   constructor() {
