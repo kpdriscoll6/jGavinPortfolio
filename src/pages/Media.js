@@ -47,12 +47,12 @@ class Media extends Component {
                 {/*pulls the first image then slice the array then map*/}
                 <div
                   className="carousel-item active"
-                  key={this.state.mediaContent[0].fields.carouselImage.fields.title}
+                  key={
+                    this.state.mediaContent[0].fields.carouselImage.fields.title
+                  }
                 >
                   <img
                     className="d-block w-100"
-                    //src={this.state.mediaContent.fields.mediaCarousel.fields.file.url}
-                    //"//images.ctfassets.net/57xmhcfzpz7y/2zaleqTtwGjHNer0uKrFIR/65587c09aad8ccfbd419d8f7121cb521/carousel3.jpg"
                     src={
                       this.state.mediaContent[0].fields.carouselImage.fields
                         .file.url
@@ -61,7 +61,7 @@ class Media extends Component {
                   />
                 </div>
                 {this.state.mediaContent.slice(1).map((media) => {
-                  console.log(media.fields.carouselImage.fields);
+                  //console.log(media.fields.carouselImage.fields);
                   return (
                     <div
                       className="carousel-item"

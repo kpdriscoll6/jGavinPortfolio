@@ -24,6 +24,7 @@ class ViewPost extends Component {
         post: item,
       });
       console.log(Object.keys(this.state.post.fields));
+      console.log(this.state.post.fields.postImage.fields.file.url)
     });
   }
   render() {
